@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Grade.create(name: 'Seguimiento #1', percentage: 0.1, subject_id: 1)
+Grade.create(name: 'Seguimiento #2', percentage: 0.1, subject_id: 1)
+Grade.create(name: 'Seguimiento #3', percentage: 0.1, subject_id: 1)

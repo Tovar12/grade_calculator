@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160820032939) do
+ActiveRecord::Schema.define(version: 20160821174508) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "grades", force: :cascade do |t|
+    t.decimal  "value"
+    t.float    "percentage"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "subject_id"
+    t.string   "name"
+    t.index ["subject_id"], name: "index_grades_on_subject_id", using: :btree
+  end
 
   create_table "subjects", force: :cascade do |t|
     t.string   "name"
@@ -22,4 +32,5 @@ ActiveRecord::Schema.define(version: 20160820032939) do
     t.datetime "updated_at",  null: false
   end
 
+  add_foreign_key "grades", "subjects"
 end

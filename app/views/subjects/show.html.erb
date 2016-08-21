@@ -1,0 +1,22 @@
+<div id="headerwrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <h4><%= @subject.name %></h4><br />
+        <h4><%= @total %></h4>
+        <div class="hline"></div>
+        <%= form_for(@subject) do |f| %>
+          <%= f.fields_for :grades do |grade| %>
+            <div class="form-group">
+              <label for="test1"><%= grade.object.name %></label>
+              <%= grade.text_field :value, :class => "form-control" %>
+            </div>
+          <% end %>
+          <div>
+            <%= f.submit "Ingresar datos", :class => "btn btn-theme" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
