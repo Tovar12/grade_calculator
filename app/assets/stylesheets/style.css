@@ -142,8 +142,8 @@ a:focus {
 .btn-theme.active,
 .open .dropdown-toggle.btn-theme {
   color: #fff;
-  background-color: #00b3fe;
-  border-color: #00b3fe;
+  background-color: #004461;
+  border-color: #004461;
 }
 
 .dmbutton:hover,
@@ -224,4 +224,29 @@ a:focus {
 
 #headerwrap .img-responsive {
 	margin: 0 auto;
+}
+
+/* Footer */
+#footerwrap {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background: #384452;
+}
+
+#footerwrap p {
+	color: #bfc9d3;
+}
+
+#footerwrap h4 {
+	color: white;
+}
+
+#footerwrap i {
+	font-size: 30px;
+	color: #bfc9d3;
+	padding-right: 25px;
+}
+
+#footerwrap i:hover {
+	color: #00b3fe
 }

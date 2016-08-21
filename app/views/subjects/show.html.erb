@@ -8,7 +8,10 @@
         <%= form_for(@subject) do |f| %>
           <%= f.fields_for :grades do |grade| %>
             <div class="form-group">
-              <label for="test1"><%= grade.object.name %></label>
+              <label for="test1">
+                <%= grade.object.name + "." %>
+                <%= "Valor: " + (grade.object.percentage * 100).to_s + "%" %>
+              </label>
               <%= grade.text_field :value, :class => "form-control" %>
             </div>
           <% end %>

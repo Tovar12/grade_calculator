@@ -24,18 +24,43 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">SOLID.</a>
+        <a class="navbar-brand" href="index.html">CALCULADOR DE NOTA FINAL.</a>
       </div>
       <div class="navbar-collapse collapse navbar-right">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="/home/index">HOME</a></li>
+          <li><a href="/home/index">HOME</a></li>
           <% @subject = Subject.find(1) %>
-          <li><%= link_to "FÁRMACO", @subject %></li>
-          <li><a href="contact.html">CONTACT</a></li>
+          <li class="active"><%= link_to "FÁRMACO", @subject %></li>
+          <% @subject = Subject.find(2) %>
+          <li class="active"><%= link_to "GESTIÓN CONTABLE", @subject %></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
   </div>
   <%= yield %>
+  <!-- *****************************************************************************************************************
+  FOOTER
+  ***************************************************************************************************************** -->
+  <div id="footerwrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <h4>About</h4>
+          <div class="hline-w"></div>
+          <p>Creado para calcular la nota para la materia Fármaco y practicar Rails</p>
+        </div>
+        <div class="col-lg-4">
+          <h4>Creado por</h4>
+          <div class="hline-w"></div>
+          <p>Tovar</p>
+        </div>
+        <div class="col-lg-4">
+          <h4>Agradecimientos</h4>
+          <div class="hline-w"></div>
+          <p>Para Paula y Niko</p>
+        </div>
+      </div><! --/row -->
+    </div><! --/container -->
+  </div><! --/footerwrap -->
 </body>
 </html>
